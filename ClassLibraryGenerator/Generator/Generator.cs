@@ -9,6 +9,6 @@ namespace ClassLibraryGenerator.Generator
     public class Generator
     {
         public List<string> Content { get; set;}
-        public string Path
+        
     }
 }

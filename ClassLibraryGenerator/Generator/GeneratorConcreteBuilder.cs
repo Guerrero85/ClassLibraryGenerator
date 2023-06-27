@@ -13,30 +13,12 @@ namespace ClassLibraryGenerator.Generator
         {
             Reset();
         }
-        public void Resete()=> _generator = new Generator();
-        public void Reset()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SetCharacter(TypeCharacter character = TypeCharacter.Normal)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SetContent(List<string> content)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SetFormat(TypeFormat format)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SetPath(string path)
-        {
-            throw new NotImplementedException();
-        }
+        public void Reset() => _generator = new Generator();
+        public void SetContent(List<string> content) => _generator.Content = content;
+        public void SetPath(string path) => _generator.Path = path;
+        public void SetFormat(TypeFormat format) => _generator.Format = format;
+        public void SetCharacter(TypeCharacter character) => _generator.Character = character;
+        public Generator GetGenerator() => _generator;  
+        
     }
 }
