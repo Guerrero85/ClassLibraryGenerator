@@ -18,7 +18,7 @@ namespace ClassLibraryGenerator.Generator
         Lowercase
     }
 
-    public  interface IBuilderGenerator
+    public interface IBuilderGenerator
     {
         public void Reset();
         public void SetContent(List<string> content);

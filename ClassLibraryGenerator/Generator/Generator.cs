@@ -9,6 +9,9 @@ namespace ClassLibraryGenerator.Generator
     public class Generator
     {
         public List<string> Content { get; set;}
-        
+        public string Path { get; set;}
+        public TypeFormat Format { get; set;}
+        public TypeCharacter Character { get; set;} 
+        public Generator() { }
     }
 }
