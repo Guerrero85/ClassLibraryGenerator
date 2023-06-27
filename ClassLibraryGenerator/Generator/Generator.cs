@@ -16,8 +16,13 @@ namespace ClassLibraryGenerator.Generator
         public void Save()
         {
             string result = "";
+            result = Format == TypeFormat.Json ? GetJson() : GetPipe();
+            if(Character == TypeCharacter.Uppercase) result = result.ToUpper();
+            if(Character == TypeCharacter.Lowercase) result = result.ToLower();
+
+            File.WriteAllText(Path, result);
         }
-        private string GentJson() => JsonSerializer.Serialize(Content);
+        private string GetJson() => JsonSerializer.Serialize(Content);
         private string GetPipe() => Content.Aggregate((accumulator, current) => accumulator + "|" + current);
     }
 }
